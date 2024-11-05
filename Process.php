@@ -1265,7 +1265,7 @@ class Process implements \IteratorAggregate
             return $result = false;
         }
 
-        return $result = (bool) @proc_open('echo 1 >/dev/null', [['pty'], ['pty'], ['pty']], $pipes);
+        return $result = (bool) @proc_open(['true'], [['pty'], ['pty'], ['pty']], $pipes);
     }
 
     /**
